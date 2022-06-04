@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/asethi/Desktop/ble_gw/zephyrproject/zephyr/samples/basic/blinky_pwm/src'
+let g:netrw_dirhist_8='/home/asethi/Desktop/ble_gw/zephyrproject/zephyr/samples/basic/blinky_pwm'
+let g:netrw_dirhist_7='/home/asethi/Desktop/ble_gw/app/build/zephyr/lib/os/CMakeFiles'
+let g:netrw_dirhist_6='/home/asethi/Desktop/nome/zephyrproject_nome/zephyr/drivers/sensor/adxl372'
+let g:netrw_dirhist_5='/home/asethi/Desktop/ble_gw/zephyrproject/zephyr/samples/subsys/usb/console'
+let g:netrw_dirhist_4='/home/asethi/Desktop/nome/zephyrproject/zephyr/share/zephyr-package/cmake'
+let g:netrw_dirhist_3='/home/asethi/Desktop/nome/zephyrproject/zephyr/share/zephyr-package'
+let g:netrw_dirhist_2='/home/asethi/Desktop/nome/zephyrproject/zephyr/share/zephyr-package/cmake'
+let g:netrw_dirhist_1='/home/asethi/.config/nvim'
