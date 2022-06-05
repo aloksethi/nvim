@@ -19,3 +19,12 @@ let $RTP=split(&runtimepath, ',')[0]
 set path=.,**
 
 set background=light
+
+map <C-K> :py3f ~/.config/nvim/clang-format.py<cr>
+imap <C-K> <c-o>:py3f ~/.config/nvim/clang-format.py<cr>
+
+function! Formatonsave()
+  let l:formatdiff = 1
+  py3f ~/.config/nvim/clang-format.py
+endfunction
+autocmd BufWritePre *.h,*.cc,*.cpp,*.c call Formatonsave()
