@@ -1,3 +1,8 @@
+call plug#begin()
+" installed in directory, ~/.local/share/nvim/plugged/
+Plug 'tpope/vim-sensible'
+call plug#end()
+
 set nocompatible
 
 " --- General settings ---
