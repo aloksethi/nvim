@@ -1,15 +1,15 @@
 "g:solarized_termcolors=256
-
 "let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-"syntax enable
+
+syntax enable
 set background=light
-"colorscheme solarized
+colorscheme solarized
 
 " Enable Mouse
-"set mouse=a
+set mouse=a
 
-" GuiAdaptiveColor 1
-
+GuiAdaptiveColor 1
+GuiTreeviewShow
 
 " Right Click Context Menu (Copy-Cut-Paste)
 nnoremap <silent><RightMouse> :call GuiShowContextMenu()<CR>
