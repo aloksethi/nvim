@@ -9,7 +9,7 @@ colorscheme solarized
 set mouse=a
 
 GuiAdaptiveColor 1
-GuiTreeviewShow
+"GuiTreeviewShow
 
 " Right Click Context Menu (Copy-Cut-Paste)
 nnoremap <silent><RightMouse> :call GuiShowContextMenu()<CR>
