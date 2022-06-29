@@ -10,6 +10,7 @@ Plug 'inkarkat/vim-ingo-library', { 'branch': 'stable' }
 call plug#end()
 
 " --- General settings ---
+let mapleader = "\\" "pressing \ should work as a leader now
 
 set nocompatible
 set backspace=indent,eol,start
