@@ -8,10 +8,17 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'inkarkat/vim-mark', { 'branch': 'stable' }
 Plug 'inkarkat/vim-ingo-library', { 'branch': 'stable' } 
 Plug 'pseewald/vim-anyfold'
+Plug 'neovim/nvim-lspconfig'
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'jsfaint/gen_tags.vim'
 call plug#end()
 
 " --- General settings ---
 let mapleader = "\\" "pressing \ should work as a leader now
+
+"add ctrl V for pasting what is in the clip board
+"imap <C-v> <cmd>:r!xclip -o<CR>i
+nmap <F2> :r!xclip -o<C-m>
 
 set nocompatible
 set backspace=indent,eol,start
@@ -78,7 +85,7 @@ autocmd BufWritePre *.h,*.cc,*.cpp,*.c call Formatonsave()
 set guifont=DroidSansMono\ NF:h11
 "let g:neovide_refresh_rate=60
 
-autocmd Filetype * AnyFoldActivate               " activate for all filetypes
+autocmd Filetype *.h,*.c AnyFoldActivate               " activate for C
 set foldlevel=0  " close all folds
 autocmd User anyfoldLoaded normal zv
 let g:LargeFile = 100000 " file is large if size greater than 0.1MB
@@ -93,12 +100,22 @@ endfunction
 augroup remember_folds
   autocmd!
 " views are saved in ~/.local/share/nvim/view/
-  autocmd BufWinLeave * mkview
+  autocmd BufWinLeave * silent! mkview
   autocmd BufWinEnter * silent! loadview
 augroup END
 
+lua require('init')
 lua << END
-require('lualine').setup{
-      options = { theme = 'auto' }
-}
+--require('lualine').setup{
+--      options = { theme = 'auto' }
+--}
+
+--local lspconfig = require('lspconfig')
+--lspconfig.ccls.setup {
+--  init_options = {
+--    cache = {
+--      directory = ".ccls-cache";
+--    };
+--  }
+--}
 END
