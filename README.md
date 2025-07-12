@@ -19,3 +19,5 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/DroidSansM
 unzip DroidSansMono.zip
 fc-cache -fv
 ```
+
+To delete plugins with vim-plug, remove or comment out the Plug lines for the plugins you want to remove from your .vimrc (or init.vim) file. After saving the changes, reload your vimrc (:source ~/.vimrc) or restart Vim. Finally, run :PlugClean
